@@ -1,3 +1,5 @@
+package ShuffleScore;
+
 // Imported libraries
 
 
@@ -9,10 +11,10 @@ public class cards {
 
     class contents :
 
-    deck of cards
-    shuffling of cards
-    distribution of cards
-    sorting of cards
+    deck of ShuffleScore.cards
+    shuffling of ShuffleScore.cards
+    distribution of ShuffleScore.cards
+    sorting of ShuffleScore.cards
 
     Sorting order - By suit then rank
 
@@ -21,7 +23,7 @@ public class cards {
                      Hearts
                      Spades
 
-    Rank value - A = 1; Number cards = Respective value; 10, J, Q, K = 10
+    Rank value - A = 1; Number ShuffleScore.cards = Respective value; 10, J, Q, K = 10
 
      */
 

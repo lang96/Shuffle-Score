@@ -1,9 +1,11 @@
+package ShuffleScore;
+
 // Imported libraries
 
 
 
 
-public class players {
+public class calculation {
 
     public static void main(String[] args) {
 
