@@ -26,9 +26,9 @@ public class mainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("shuffleScore.fxml"));
-        primaryStage.setTitle("WADDUP DAWGS!");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        Parent root = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
+        primaryStage.setTitle("Shuffle Score by Kuthingalas");
+        primaryStage.setScene(new Scene(root, 1000, 800));
         primaryStage.show();
     }
 
