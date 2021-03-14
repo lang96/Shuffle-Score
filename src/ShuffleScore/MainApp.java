@@ -8,15 +8,30 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.canvas.*;
+import javafx.scene.web.*;
+import javafx.scene.layout.*;
+import javafx.scene.image.*;
+import java.io.*;
+import javafx.geometry.*;
+import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+import java.io.FileInputStream;
 import java.util.*;
 
 /*
@@ -50,34 +65,47 @@ public class MainApp extends Application {
         grid.setVgap(10);
         grid.setHgap(12);
         primaryStage.setTitle("Shuffle Score!");
-        primaryStage.setScene(new Scene(grid, 420, 300));
+        primaryStage.getIcons().add(new Image("file:C:\\Users\\User\\OneDrive\\Desktop\\OOPDS\\icon.png"));
+        primaryStage.setScene(new Scene(grid, 420, 350));
         primaryStage.show();
+
+        FileInputStream input = new FileInputStream("C:\\Users\\User\\IdeaProjects\\OOPDS_Assignment_2\\res\\bg1.png");
+        Image image = new Image(input);
+        BackgroundImage backgroundimage = new BackgroundImage(image,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.DEFAULT,
+                BackgroundSize.DEFAULT);
+
+        Background background = new Background(backgroundimage);
+        grid.setBackground(background);
 
         HBox buttonBox = new HBox();
         buttonBox.setSpacing(10.0);
 
         Label lab1 = new Label("PLAYER NAME");
+        lab1.setTextFill(Color.WHITE);
         lab1.setMaxWidth(Double.MAX_VALUE);
         lab1.setFont(new Font("Arial", 24));
-        //lab1.setAlignment(Pos.CENTER);
+        lab1.setAlignment(Pos.CENTER);
         grid.add(lab1, 2, 3);
 
         playerName1 = new TextField();
         playerName1.setPromptText("Enter Player 1 Name");
         playerName1.setMaxWidth(Double.MAX_VALUE);
-        //play1.setAlignment(Pos.CENTER);
+        playerName1.setAlignment(Pos.CENTER);
         grid.add(playerName1, 2, 5);
 
         playerName2 = new TextField();
         playerName2.setPromptText("Enter Player 2 Name");
         playerName2.setMaxWidth(Double.MAX_VALUE);
-        //play2.setAlignment(Pos.CENTER);
+        playerName2.setAlignment(Pos.CENTER);
         grid.add(playerName2, 2, 7);
 
         playerName3 = new TextField();
         playerName3.setPromptText("Enter Player 3 Name");
         playerName3.setMaxWidth(Double.MAX_VALUE);
-        //play3.setAlignment(Pos.CENTER);
+        playerName3.setAlignment(Pos.CENTER);
         grid.add(playerName3, 2, 9);
 
         button = new Button("Proceed");
